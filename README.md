@@ -1,12 +1,3 @@
----
-title: Automated Market Research AI
-emoji: 📈
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
----
-
 # Automated Market Research Crew 🚀
 
 [![CrewAI](https://img.shields.io/badge/CrewAI-Agentic%20Framework-blue.svg)](https://crewai.com/)
