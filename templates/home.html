@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home - AI Market Research Crew{% endblock %}
+
+{% block content %}
+<section class="hero glass-card text-center">
+    <div class="badge">Next Generation Analytics</div>
+    <h1>Turn Ideas into <span>Actionable Data</span></h1>
+    <p class="hero-subtitle">Our AI crew of specialists will conduct comprehensive market research, competitor analysis, and strategic positioning for your next big product idea.</p>
+    <div class="hero-actions">
+        <a href="{{ url_for('research') }}" class="btn-primary">Start Research Now</a>
+        <a href="{{ url_for('about') }}" class="btn-secondary">Learn More</a>
+    </div>
+</section>
+
+<section class="features-grid">
+    <div class="feature-card glass-card">
+        <h3>Market Sizing</h3>
+        <p>Get instant TAM, SAM, and SOM calculations alongside detailed industry trends and growth projections.</p>
+    </div>
+    <div class="feature-card glass-card">
+        <h3>Competitor Intel</h3>
+        <p>Detailed breakdowns of your direct and indirect competitors, feature gaps, and pricing matrices.</p>
+    </div>
+    <div class="feature-card glass-card">
+        <h3>Strategic Roadmap</h3>
+        <p>A full Go-To-Market strategy, MVP feature prioritization, and revenue projections.</p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Methodology - AI Market Research Crew{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4 animate-on-scroll">
+    <div class="badge badge-accent">The Engine</div>
+    <h1>Our <span>Methodology</span></h1>
+    <p>How our highly orchestrated multi-agent framework produces tier-1 business intelligence.</p>
+</div>
+
+<div class="methodology-container mt-5">
+    <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-content glass-card">
+                <h3>Ingestion & Validation</h3>
+                <p>Your raw product idea is ingested into our secure backend. The prompt is structurally analyzed by our orchestrator node to extract core technological requirements and presumed market sectors.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll" style="transition-delay: 0.2s;">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-content glass-card">
+                <h3>Parallel Agent Execution (CrewAI)</h3>
+                <p>Four autonomous agents are spun up asynchronously. The Market Analyst pulls macro-economic data, while the Intel Analyst maps out the current competitive software landscape. Simultaneously, Customer Insights digs into forums.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll" style="transition-delay: 0.4s;">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-content glass-card">
+                <h3>Neural Synthesis</h3>
+                <p>The Senior Business Analyst agent receives the raw vector outputs from the four research agents. It utilizes Google Gemini's massive context window to cross-reference data points, resolve contradictions, and format a unified investment memo.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll" style="transition-delay: 0.6s;">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-content glass-card">
+                <h3>Delivery</h3>
+                <p>The final markdown response is sanitized, injected into our beautiful UI, and rendered securely into your browser session in less than 3 minutes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

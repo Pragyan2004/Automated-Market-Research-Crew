@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Start Research - AI Market Research Crew{% endblock %}
+
+{% block head %}
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- DOMPurify to sanitize markdown output -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <div class="badge">Powered by CrewAI</div>
+    <h1>Automated <span>Market Research</span></h1>
+    <p>Enter your product idea below and let our AI specialist crew conduct market analysis, competitive intelligence, and business strategy formulation.</p>
+</div>
+
+<section class="input-section glass-card">
+    <form id="research-form">
+        <div class="input-group">
+            <label for="product-idea">Product Idea / Concept</label>
+            <textarea 
+                id="product-idea" 
+                placeholder="e.g. An AI-powered tool that automatically generates UI mockups and frontend code from hand-drawn sketches or text descriptions." 
+                required 
+                rows="4"
+            ></textarea>
+        </div>
+        <button type="submit" id="submit-btn">
+            <span class="btn-text">Generate Full Research Report</span>
+            <span class="loader hidden"></span>
+        </button>
+    </form>
+</section>
+
+<section id="results-section" class="results-section glass-card hidden">
+    <div class="results-header">
+        <h2>Research Findings</h2>
+        <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <div class="agents-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Mission Accomplished</span>
+            </div>
+            <button id="download-btn" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: text-bottom; margin-right: 5px;">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download Report
+            </button>
+        </div>
+    </div>
+    <div id="markdown-content" class="markdown-body">
+        <!-- Content will be injected here -->
+    </div>
+</section>
+
+<div id="loading-overlay" class="hidden">
+    <div class="loading-content glass-card">
+        <div class="spinner-container">
+            <div class="radar-spinner"></div>
+        </div>
+        <h3 style="font-family: 'Outfit'; font-size: 1.5rem; margin-bottom: 0.5rem;">The AI Crew is Analyzing...</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Depending on API speeds, this takes 2-5 minutes.</p>
+        
+        <div class="progress-steps" style="text-align: left; background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+            <div class="step active"><span>1.</span> Market Research Specialist</div>
+            <div class="step"><span>2.</span> Competitive Intelligence Analyst</div>
+            <div class="step"><span>3.</span> Customer Insights Researcher</div>
+            <div class="step"><span>4.</span> Product Strategy Advisor</div>
+            <div class="step"><span>5.</span> Business Analyst & Synthesis</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+{% endblock %}

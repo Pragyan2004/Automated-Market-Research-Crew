@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Use Cases - AI Market Research Crew{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4 animate-on-scroll">
+    <div class="badge badge-accent">Scenarios</div>
+    <h1>Powerful <span>Use Cases</span></h1>
+    <p>See how different industries leverage our AI Crew to accelerate go-to-market strategies.</p>
+</div>
+
+<div class="grid-layout mt-4">
+    <div class="glass-card use-case-card animate-on-scroll" style="transition-delay: 0.1s;">
+        <div class="card-icon">🚀</div>
+        <h3>B2B SaaS Startups</h3>
+        <p>Validate your SaaS idea before writing a single line of code. Discover exact feature gaps in legacy enterprise software and identify the perfect price point for your target ICP.</p>
+    </div>
+    
+    <div class="glass-card use-case-card animate-on-scroll" style="transition-delay: 0.2s;">
+        <div class="card-icon">🛒</div>
+        <h3>E-Commerce Brands</h3>
+        <p>Analyze emerging consumer trends, supply chain logistics software requirements, and competitive direct-to-consumer moats before launching a new retail brand.</p>
+    </div>
+    
+    <div class="glass-card use-case-card animate-on-scroll" style="transition-delay: 0.3s;">
+        <div class="card-icon">💼</div>
+        <h3>Venture Capitalists</h3>
+        <p>Perform deep-dive due diligence on pitch decks. Instantly generate a neutral, data-driven investment memo detailing TAM, regulatory risks, and competitive threats.</p>
+    </div>
+    
+    <div class="glass-card use-case-card animate-on-scroll" style="transition-delay: 0.4s;">
+        <div class="card-icon">📱</div>
+        <h3>Mobile App Devs</h3>
+        <p>Research app store saturation, evaluate freemium vs subscription models, and define user acquisition channels for consumer utility apps.</p>
+    </div>
+</div>
+
+<div class="text-center mt-5 animate-on-scroll">
+    <a href="{{ url_for('research') }}" class="btn-primary">Test Your Use Case Now</a>
+</div>
+{% endblock %}

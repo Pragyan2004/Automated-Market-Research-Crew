@@ -1,0 +1,130 @@
+---
+title: Automated Market Research AI
+emoji: 📈
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+---
+
+# Automated Market Research Crew 🚀
+
+[![CrewAI](https://img.shields.io/badge/CrewAI-Agentic%20Framework-blue.svg)](https://crewai.com/)
+[![Flask](https://img.shields.io/badge/Flask-Web%20Backend-green.svg)](https://flask.palletsprojects.com/)
+[![Google Gemini](https://img.shields.io/badge/Powered%20by-Google%20Gemini-orange.svg)](https://deepmind.google/technologies/gemini/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
+
+Welcome to the **Automated Market Research AI Platform**. This project leverages the powerful combination of **CrewAI** and **Google Gemini** to orchestrate an autonomous team of highly specialized AI agents. 
+
+Instead of spending weeks manually analyzing the market, you simply provide a product concept. Within minutes, the AI agents will research, cross-reference, and synthesize a complete, professional Go-To-Market investment memo.
+
+---
+
+## 🌟 Key Features
+
+- **Multi-Agent Orchestration (CrewAI):** Five specialized AI personas work sequentially to build your report.
+- **Vibrant Light-Mode UI:** A beautiful, custom-designed frontend built with HTML5, CSS3 Glassmorphism, and smooth scroll animations (no bloated CSS frameworks).
+- **Interactive Progress Tracking:** See exactly what each agent is doing in real-time with dynamically typing UI sub-statuses.
+- **Terminal Token Metrics:** Live API token usage logging injected directly into the backend terminal.
+- **Instant Export:** One-click download of the final synthesized report directly to Markdown format.
+
+---
+
+## 🤖 Meet the AI Crew
+
+Our architecture is strictly divided into specialized roles to prevent hallucination and ensure high-fidelity outputs:
+
+1. 📊 **Market Research Specialist**
+   - **Goal:** Market sizing and trend analysis.
+   - **Task:** Calculates TAM (Total Addressable Market), SAM, and SOM while identifying macroeconomic trends.
+   
+2. 🎯 **Competitive Intelligence Analyst**
+   - **Goal:** Competitive software mapping.
+   - **Task:** Dissects both direct and indirect competitors, building feature-gap matrices.
+
+3. 👥 **Customer Insights Researcher**
+   - **Goal:** Consumer sentiment extraction.
+   - **Task:** Analyzes pain points and builds detailed customer personas for targeted marketing.
+
+4. ⚙️ **Product Strategy Advisor**
+   - **Goal:** MVP engineering roadmap.
+   - **Task:** Outlines the core technical requirements and formulates the Go-To-Market (GTM) strategy.
+
+5. 💼 **Senior Business Analyst**
+   - **Goal:** Final synthesis.
+   - **Task:** Compiles the findings of all previous agents into a cohesive, perfectly formatted investment memo.
+
+---
+
+## 💻 Tech Stack
+
+### Backend
+- **Python 3.10+**: Core programming language.
+- **CrewAI**: Autonomous agent framework for orchestrating LLM tasks.
+- **Google GenAI (Gemini 3.1 Flash-Lite / 1.5 Flash)**: Blazing fast LLM inference.
+- **Flask**: Lightweight web framework bridging the Python agents with the frontend.
+
+### Frontend
+- **Vanilla JavaScript (ES6)**: Handling asynchronous API calls and DOM manipulation.
+- **Vanilla CSS3**: Custom glassmorphism, flexbox/grid layouts, and cubic-bezier scroll animations.
+- **Marked.js & DOMPurify**: Secure, client-side Markdown to HTML rendering.
+
+---
+
+## 🚀 Local Development Setup
+
+We highly recommend using `uv` for lightning-fast dependency resolution.
+
+### 1. Prerequisites
+- Install Python 3.10 or higher.
+- Install [uv](https://github.com/astral-sh/uv).
+
+### 2. Clone and Configure
+Clone this repository and create your environment variables file:
+
+```bash
+git clone https://github.com/your-username/market-research-crew.git
+cd market-research-crew
+```
+
+Create a `.env` file in the root directory and add your Google Gemini API key:
+```env
+GEMINI_API_KEY="your_google_gemini_api_key_here"
+```
+
+### 3. Install Dependencies
+```bash
+uv pip install -e .[google-genai] flask python-dotenv markdown
+```
+
+### 4. Run the Application
+Start the Flask web server:
+```bash
+uv run python app.py
+```
+Navigate to `http://localhost:5000` in your web browser.
+
+---
+
+## ☁️ Deployment to HuggingFace Spaces
+
+This repository is strictly configured to be deployed out-of-the-box on HuggingFace Docker Spaces. 
+
+The included `Dockerfile` takes care of:
+1. Setting up a secure, non-root `user` (required by HuggingFace).
+2. Using `uv` for fast dependency caching in Docker.
+3. Automatically serving the Flask app on the required `PORT 7860`.
+
+**Deployment Steps:**
+1. Create a new "Docker" Space on HuggingFace.
+2. Push the code to the space repository.
+3. Go to the Space Settings and add a new **Secret** variable:
+   - **Name:** `GEMINI_API_KEY`
+   - **Value:** `<your-api-key>`
+4. The container will automatically build and launch!
+
+---
+
+## 📝 License & Usage
+
+This project is intended for educational purposes and internal tooling. Output generated by AI should always be independently verified before making financial or business decisions.

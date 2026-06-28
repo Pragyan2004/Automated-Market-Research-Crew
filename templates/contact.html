@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - AI Market Research Crew{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4 animate-on-scroll">
+    <div class="badge badge-accent">Get In Touch</div>
+    <h1>Contact <span>Our Team</span></h1>
+    <p>We are headquartered in the financial capital of India. Reach out for enterprise API access and dedicated support.</p>
+</div>
+
+<div class="contact-grid mt-4">
+    <div class="glass-card contact-info animate-on-scroll" style="transition-delay: 0.1s;">
+        <h3>Global Headquarters</h3>
+        <p class="mb-4">Bandra Kurla Complex (BKC)<br>Mumbai, Maharashtra 400051<br>India</p>
+        
+        <h4>Email</h4>
+        <p class="mb-4">enterprise@researchai.com</p>
+        
+        <h4>Phone</h4>
+        <p>+91 22 1234 5678</p>
+    </div>
+    
+    <div class="glass-card contact-map animate-on-scroll" style="transition-delay: 0.2s;">
+        <!-- Embedded Google Map for Mumbai (BKC) -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15083.568772097483!2d72.85338165!3d19.06859595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8e123f8d27b%3A0x43799f241aae4678!2sBandra%20Kurla%20Complex%2C%20Bandra%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689255001234!5m2!1sen!2sin" 
+            width="100%" 
+            height="350" 
+            style="border:0; border-radius: 16px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
+<div class="glass-card mt-5 text-center animate-on-scroll" style="transition-delay: 0.3s; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <h3>Send us a message</h3>
+    <form class="contact-form mt-4">
+        <div class="input-group">
+            <input type="text" placeholder="Your Name" class="form-control" required>
+        </div>
+        <div class="input-group">
+            <input type="email" placeholder="Your Enterprise Email" class="form-control" required>
+        </div>
+        <div class="input-group">
+            <textarea placeholder="How can we help scale your market research?" rows="4" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-100" onclick="event.preventDefault(); alert('Message sent successfully! Our Mumbai team will reach out shortly.');">Send Message</button>
+    </form>
+</div>
+{% endblock %}
